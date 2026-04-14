@@ -6,7 +6,7 @@
     "email": "arafat.rahman@gmail.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["college", "close friend"],
+    "tags": "college",
     "bio": "Met during engineering college. We used to study late nights and still catch up over tea.",
     "goal": 14,
     "next_due_date": "2026-04-05"
@@ -18,7 +18,7 @@
     "email": "nusrat.jahan@gmail.com",
     "days_since_contact": 10,
     "status": "on-track",
-    "tags": ["office", "project partner"],
+    "tags": "office",
     "bio": "Worked together on multiple office projects. Very supportive and always positive.",
     "goal": 14,
     "next_due_date": "2026-04-18"
@@ -30,7 +30,7 @@
     "email": "tanvir.hasan@gmail.com",
     "days_since_contact": 13,
     "status": "almost due",
-    "tags": ["gym", "fitness buddy"],
+    "tags": "gym",
     "bio": "Gym partner for the last 2 years. We motivate each other to stay consistent.",
     "goal": 14,
     "next_due_date": "2026-04-16"
@@ -42,7 +42,7 @@
     "email": "sadia.islam@gmail.com",
     "days_since_contact": 25,
     "status": "overdue",
-    "tags": ["school", "best friend"],
+    "tags": "school",
     "bio": "School best friend. We share everything and always support each other.",
     "goal": 14,
     "next_due_date": "2026-03-30"
@@ -54,7 +54,7 @@
     "email": "mahmudul.karim@gmail.com",
     "days_since_contact": 7,
     "status": "on-track",
-    "tags": ["startup", "networking"],
+    "tags": "startup",
     "bio": "Met at a startup event. We discuss business ideas and opportunities.",
     "goal": 14,
     "next_due_date": "2026-04-21"
@@ -66,7 +66,7 @@
     "email": "farhana.akter@gmail.com",
     "days_since_contact": 15,
     "status": "almost due",
-    "tags": ["family friend"],
+    "tags": "family friend",
     "bio": "Family friend for many years. Often meet during family gatherings.",
     "goal": 14,
     "next_due_date": "2026-04-15"
@@ -78,7 +78,7 @@
     "email": "rashed.chowdhury@gmail.com",
     "days_since_contact": 20,
     "status": "overdue",
-    "tags": ["university", "roommate"],
+    "tags": "university",
     "bio": "University roommate. Shared so many memories living together.",
     "goal": 14,
     "next_due_date": "2026-04-02"
@@ -90,7 +90,7 @@
     "email": "mim.sultana@gmail.com",
     "days_since_contact": 5,
     "status": "on-track",
-    "tags": ["designer", "creative"],
+    "tags": "designer",
     "bio": "Graphic designer friend. We collaborate on creative projects.",
     "goal": 14,
     "next_due_date": "2026-04-24"
@@ -102,7 +102,7 @@
     "email": "imran.hossain@gmail.com",
     "days_since_contact": 14,
     "status": "almost due",
-    "tags": ["travel", "adventure"],
+    "tags": "travel",
     "bio": "Travel buddy. We love exploring new places and going on road trips.",
     "goal": 14,
     "next_due_date": "2026-04-14"
@@ -114,7 +114,7 @@
     "email": "tania.rahman@gmail.com",
     "days_since_contact": 22,
     "status": "overdue",
-    "tags": ["mentor", "career"],
+    "tags": "mentor",
     "bio": "Career mentor who always gives valuable advice and guidance.",
     "goal": 14,
     "next_due_date": "2026-04-01"
