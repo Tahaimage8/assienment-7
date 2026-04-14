@@ -42,7 +42,7 @@ const StudentDetails = () => {
 
     <div>
         <h2 className="text-[#1F2937] text-[24px] font-semibold">Your Friends</h2> <br />
-            <div className="grid grid-cols-4 gap-10 ">
+            <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
       {
         friends.map((friend) => <Card key={friend.id} friend={friend} />)
       }
