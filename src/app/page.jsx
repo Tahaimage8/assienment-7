@@ -1,3 +1,5 @@
+"use client";
+
 import Banner from "@/Compornent/Banner";
 import StudentDetails from "@/Compornent/StudentDetails";
 
