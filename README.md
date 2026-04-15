@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🟢 KeenKeeper
 
-## Getting Started
+## 📌 Description
+KeenKeeper is a simple relationship tracking web app where I can keep track of my friends and stay connected with them. It helps me see how long it has been since I last talked to someone and reminds me to reach out again so I don’t lose touch.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Technologies Used
+- Next.js  
+- React.js  
+- Tailwind CSS + DaisyUI  
+- React Icons  
+- Context API  
+- React Toastify  
+- Recharts (coming soon)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔹 Friend Tracking Dashboard  
+I can see all my friends in one place along with their current status like on-track, overdue, or almost due.
 
-## Learn More
+### 🔹 Dynamic Friend Details Page  
+Clicking on any friend opens a detailed page where I can see more information and take actions.
 
-To learn more about Next.js, take a look at the following resources:
+### 🔹 Interactive Timeline System  
+I can log interactions like call, text, or video, and they are added to a timeline to track my activity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 Data Visualization with Recharts  
+I will add charts using Recharts to visualize interaction patterns and friend statuses.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 💡 What I Learned
+This project helped me understand dynamic routing, context API, and state management in a practical way.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
