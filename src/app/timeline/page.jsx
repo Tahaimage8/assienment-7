@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { useTimeline } from "@/context/TimelineContext";
+import { FiVideo } from "react-icons/fi";
+import { AiTwotoneMessage } from "react-icons/ai";
+import { LuPhoneCall } from "react-icons/lu";
 
 const TimelinePage = () => {
   const { timeline } = useTimeline();
@@ -42,9 +45,8 @@ const TimelinePage = () => {
             >
               <h3 className="text-lg text-[#1F2937]">
                 <span className="font-semibold text-[#244D3F]">
-                  {item.type}
-                </span>{" "}
-                with {item.title.replace(`${item.type} with `, "")}
+                 <span className="flex items-center gap-3"> {item.type === "Call" ? (<LuPhoneCall />) : item.type === "Text" ? (<AiTwotoneMessage />) : (<FiVideo />)}{item.type} with {item.title.replace(`${item.type} with `, "")}</span> 
+                </span>
               </h3>
               <p className="text-sm text-[#6B7280]">{item.date}</p>
             </div>

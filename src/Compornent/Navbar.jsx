@@ -19,7 +19,7 @@ const Navbar = () => {
 
       <div className="navbar-start">
         <Link href="/" className="text-xl md:text-2xl font-semibold text-[#1d2a39]">
-          KeenKeeper
+          Keen<span className="text-[#3ba884]">Keeper</span>
         </Link>
       </div>
 

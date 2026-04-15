@@ -8,6 +8,7 @@ import { AiTwotoneMessage } from "react-icons/ai";
 import { FiVideo } from "react-icons/fi";
 import { useTimeline } from "@/context/TimelineContext";
 import { toast } from "react-toastify";
+import { notFound } from "next/navigation";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -33,18 +34,13 @@ const CardDetails = () => {
   }
 
   if (!friend) {
-    return (
-      <div className="flex justify-center items-center py-20">
-        <h2 className="text-2xl font-semibold text-red-500">
-          Friend not found
-        </h2>
-      </div>
-    );
+ notFound();
+
   }
   const handleAction = (type) => {
     addTimeline(type, friend.name);
     // toast need to add
-    toast.success(`${type} is added to ${friend.name} timeline`,{
+    toast.success(`${type} with ${friend.name} `,{
 position: "top-center",
 autoClose: 3000,
 hideProgressBar: true,

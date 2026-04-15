@@ -2,22 +2,22 @@ import { FaYoutube, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#244D3F] text-white py-16 text-center">
+    <footer className="bg-[#244D3F] text-white py-16 text-center ">
 <div className="max-w-7xl mx-auto">
     
-      <h1 className="text-6xl font-bold">KeenKeeper</h1>
+      <h1 className="md:text-6xl font-bold sm:text-4xl">KeenKeeper</h1>
 
 
-      <p className="mt-3 text-md text-gray-200  mx-auto font-semibold">
+      <p className="mt-3 lg:text-md text-gray-200  mx-auto font-semibold sm:text-xl">
         Your personal shelf of meaningful connections. Browse, tend, and nurture
         the relationships that matter most.
       </p>
 
 
       <div className="mt-6">
-        <p className="mb-3 text-sm">Social Links</p>
+        <p className="mb-3 text-sm ">Social Links</p>
 
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-4 ">
           <a
             href="#"
             target="_blank"
@@ -49,7 +49,7 @@ const Footer = () => {
         
         <p>© 2026 KeenKeeper. All rights reserved.</p>
 
-        <div className="flex gap-6 mt-3 md:mt-0">
+        <div className="md:flex gap-6 mt-3 md:mt-3 sm:grid sm:grid-cols-1">
           <a href="#" target="_blank" className="hover:underline">
             Privacy Policy
           </a>
