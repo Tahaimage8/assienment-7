@@ -1,20 +1,21 @@
 "use client";
 
-
-import {  Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Card from "./Card";
 
 const StudentDetails = () => {
   const [friends, setFriends] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch('/friends.json').then(req => req.json()).then((data) => {
+    fetch("/friends.json")
+      .then((req) => req.json())
+      .then((data) => {
         setFriends(data);
         setLoading(false);
-      });;
+      });
   }, []);
 
-if (loading) {
+  if (loading) {
     return (
       <div className="flex justify-center items-center py-20">
         <span className="loading loading-spinner loading-lg text-[#244D3F]"></span>
@@ -51,18 +52,21 @@ if (loading) {
 
       {/* //---- ------------------------------------*/}
 
-    <div>
-        <h2 className="text-[#1F2937] text-[24px] font-semibold">Your Friends</h2> <br />
-            <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
-      {
-        friends.map((friend) =><div key={friend.id}> 
-        <Suspense fallback='loding.saaaaaaaaaaaaaaaa'>
-          <Card  friend={friend} />
-        </Suspense>
-        </div>)
-      }
-    </div>
-    </div>
+      <div>
+        <h2 className="text-[#1F2937] text-[24px] font-semibold">
+          Your Friends
+        </h2>{" "}
+        <br />
+        <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 ">
+          {friends.map((friend) => (
+            <div key={friend.id}>
+              <Suspense fallback="loding.saaaaaaaaaaaaaaaa">
+                <Card friend={friend} />
+              </Suspense>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
