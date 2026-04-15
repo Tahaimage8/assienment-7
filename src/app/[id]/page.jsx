@@ -7,6 +7,7 @@ import { LuPhoneCall } from "react-icons/lu";
 import { AiTwotoneMessage } from "react-icons/ai";
 import { FiVideo } from "react-icons/fi";
 import { useTimeline } from "@/context/TimelineContext";
+import { toast } from "react-toastify";
 
 const CardDetails = () => {
   const { id } = useParams();
@@ -43,7 +44,7 @@ const CardDetails = () => {
   const handleAction = (type) => {
     addTimeline(type, friend.name);
     // toast need to add
-    alert(`${type} added to timeline`);
+    toast.success(`${type} is added to ${friend.name} timeline`,);
   };
   const statusStyle = {
     "almost due": "bg-[#EFAD44] text-white",
@@ -91,13 +92,13 @@ const CardDetails = () => {
           </div>
 
           <div className="mt-8 space-y-3">
-            <button className="w-full py-3 rounded-xl bg-gray-100 font-medium">
+            <button className="w-full py-3 rounded-xl bg-gray-100 font-medium btn">
               Snooze 2 Weeks
             </button>
-            <button className="w-full py-3 rounded-xl bg-gray-100 font-medium">
+            <button className="w-full py-3 rounded-xl bg-gray-100 font-medium btn">
               Archive
             </button>
-            <button className="w-full py-3 rounded-xl bg-red-50 text-red-500 font-medium">
+            <button className="w-full py-3 rounded-xl bg-red-50 text-red-500 font-medium btn">
               Delete
             </button>
           </div>

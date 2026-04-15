@@ -13,7 +13,7 @@ const TimelinePage = () => {
       : timeline.filter((item) => item.type.toLowerCase() === filter);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
+    <div className="w-200 mx-auto px-4 py-10">
       <h1 className="text-4xl font-bold text-[#1F2937] mb-6">Timeline</h1>
 
       <div className="mb-8">
@@ -38,7 +38,7 @@ const TimelinePage = () => {
           filteredTimeline.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-2xl shadow-md px-5 py-4"
+              className="bg-white rounded-2xl shadow-md px-5 py-4  "
             >
               <h3 className="text-lg text-[#1F2937]">
                 <span className="font-semibold text-[#244D3F]">
