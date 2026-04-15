@@ -6,12 +6,13 @@ import { useParams } from "next/navigation";
 import { LuPhoneCall } from "react-icons/lu";
 import { AiTwotoneMessage } from "react-icons/ai";
 import { FiVideo } from "react-icons/fi";
+import { useTimeline } from "@/context/TimelineContext";
 
 const CardDetails = () => {
   const { id } = useParams();
   const [friend, setFriend] = useState(null);
   const [loading, setLoading] = useState(true);
-
+  const { addTimeline } = useTimeline();
   useEffect(() => {
     fetch("/friends.json")
       .then((res) => res.json())
@@ -39,7 +40,11 @@ const CardDetails = () => {
       </div>
     );
   }
-
+  const handleAction = (type) => {
+    addTimeline(type, friend.name);
+    // toast need to add
+    alert(`${type} added to timeline`);
+  };
   const statusStyle = {
     "almost due": "bg-[#EFAD44] text-white",
     overdue: "bg-[#EF4444] text-white",
@@ -137,21 +142,30 @@ const CardDetails = () => {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <button className="btn text-[#1F2937] p-10 rounded-xl flex items-center justify-center">
+              <button
+                onClick={() => handleAction("Call")}
+                className="btn text-[#1F2937] p-10 rounded-xl flex items-center justify-center"
+              >
                 <div className="flex flex-col items-center gap-2 font-semibold">
                   <LuPhoneCall className="text-xl" />
                   <span>Call</span>
                 </div>
               </button>
 
-              <button className="btn text-[#1F2937] p-10 rounded-xl flex items-center justify-center">
+              <button
+                onClick={() => handleAction("Text")}
+                className="btn text-[#1F2937] p-10 rounded-xl flex items-center justify-center"
+              >
                 <div className="flex flex-col items-center gap-2 font-semibold">
                   <AiTwotoneMessage className="text-xl" />
                   <span>Text</span>
                 </div>
               </button>
 
-              <button className="btn text-[#1F2937] p-10 rounded-xl flex items-center justify-center">
+              <button
+                onClick={() => handleAction("Video")}
+                className="btn text-[#1F2937] p-10 rounded-xl flex items-center justify-center"
+              >
                 <div className="flex flex-col items-center gap-2 font-semibold">
                   <FiVideo className="text-xl" />
                   <span>Video</span>

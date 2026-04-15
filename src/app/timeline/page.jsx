@@ -1,11 +1,58 @@
-import React from 'react';
+"use client";
 
-const timeLinePage = () => {
-    return (
-        <div>
-            <h2>TimeLine page</h2>
-        </div>
-    );
+import { useState } from "react";
+import { useTimeline } from "@/context/TimelineContext";
+
+const TimelinePage = () => {
+  const { timeline } = useTimeline();
+  const [filter, setFilter] = useState("all");
+
+  const filteredTimeline =
+    filter === "all"
+      ? timeline
+      : timeline.filter((item) => item.type.toLowerCase() === filter);
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      <h1 className="text-4xl font-bold text-[#1F2937] mb-6">Timeline</h1>
+
+      <div className="mb-8">
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          className="select select-bordered w-full max-w-xs rounded-xl"
+        >
+          <option value="all">Filter timeline</option>
+          <option value="call">Call</option>
+          <option value="text">Text</option>
+          <option value="video">Video</option>
+        </select>
+      </div>
+
+      <div className="space-y-4">
+        {filteredTimeline.length === 0 ? (
+          <div className="bg-white rounded-2xl shadow-md p-10 text-center text-gray-500">
+            No interactions yet.
+          </div>
+        ) : (
+          filteredTimeline.map((item) => (
+            <div
+              key={item.id}
+              className="bg-white rounded-2xl shadow-md px-5 py-4"
+            >
+              <h3 className="text-lg text-[#1F2937]">
+                <span className="font-semibold text-[#244D3F]">
+                  {item.type}
+                </span>{" "}
+                with {item.title.replace(`${item.type} with `, "")}
+              </h3>
+              <p className="text-sm text-[#6B7280]">{item.date}</p>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
 };
 
-export default timeLinePage;
+export default TimelinePage;
