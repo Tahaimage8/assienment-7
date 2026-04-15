@@ -2,7 +2,7 @@
 
 import Banner from "@/Compornent/Banner";
 import StudentDetails from "@/Compornent/StudentDetails";
-import { ToastContainer } from "react-toastify";
+
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
         <Banner />
         <StudentDetails />
 
-         <ToastContainer />
+
       </div>
     </div>
   );

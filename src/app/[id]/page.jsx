@@ -44,7 +44,16 @@ const CardDetails = () => {
   const handleAction = (type) => {
     addTimeline(type, friend.name);
     // toast need to add
-    toast.success(`${type} is added to ${friend.name} timeline`,);
+    toast.success(`${type} is added to ${friend.name} timeline`,{
+position: "top-center",
+autoClose: 3000,
+hideProgressBar: true,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "dark",
+});
   };
   const statusStyle = {
     "almost due": "bg-[#EFAD44] text-white",
